@@ -1,0 +1,23 @@
+.NavbarContainer {
+  @apply text-black;
+  @apply bg-white; 
+  @apply w-full;
+}
+
+.NavbarContent {
+  @apply flex flex-row flex-wrap p-5 items-center;
+}
+
+.NavbarIconLink {
+  @apply flex items-center mb-4;
+}
+
+.NavbarSearch {
+  @apply flex-grow-1-2;
+  @apply mx-auto my-0;
+}
+
+.Search {
+  @apply rounded-md !important;
+  @apply focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 border-gray-300 rounded-md;
+}

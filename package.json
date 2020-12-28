@@ -3,24 +3,53 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.0.0",
+    "@rebass/forms": "^4.0.6",
+    "@reduxjs/toolkit": "^1.5.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/classnames": "^2.2.11",
     "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
+    "@types/mapbox-gl": "^2.0.0",
+    "@types/node": "^14.14.14",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-onsenui": "^2.9.13",
+    "@types/react-router-dom": "^5.1.6",
+    "@types/rebass": "^4.0.7",
+    "@types/rebass__forms": "^4.0.4",
+    "autoprefixer": "^9",
+    "grommet": "^2.16.2",
+    "grommet-icons": "^4.5.0",
+    "mapbox-gl": "^2.0.0",
+    "onsenui": "^2.11.1",
+    "polished": "^4.0.5",
+    "postcss": "^7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-md": "^2.5.1",
+    "react-onsenui": "^1.11.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-toolbox": "^2.0.0-beta.13",
+    "react-toolbox-themr": "^1.0.2",
+    "rebass": "^4.0.7",
+    "source-map-explorer": "^2.5.1",
+    "styled-components": "^5.2.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "toolbox": "react-toolbox-themr"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +68,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactToolbox": {
+    "include": [
+      "APP_BAR"
+    ],
+    "customProperties": {
+      "animation-duration": "0.3s",
+      "color-accent": "var(--palette-pink-a200)",
+      "color-accent-dark": "var(--palette-pink-700)",
+      "color-primary-contrast": "var(--color-dark-contrast)",
+      "color-accent-contrast": "var(--color-dark-contrast)"
+    },
+    "output": "src/assets/react-toolbox"
+  },
+  "devDependencies": {
+    "node-sass": "^4.0.0"
   }
 }

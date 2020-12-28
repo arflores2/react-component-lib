@@ -1,0 +1,17 @@
+.Toolbar {
+  height: 60px !important;
+}
+
+.ToolbarButton {
+  line-height: 60px;
+}
+
+.SearchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.SearchInput {
+  display: flex;
+  width: 100%;
+}

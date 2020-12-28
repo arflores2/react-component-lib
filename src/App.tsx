@@ -1,24 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import { OnsenPage } from './components/onsen/OnsenPage';
+import { RebassPage } from './components/rebass/RebassPage';
+import { ReactToolboxPage } from './components/react-toolbox/ReactToolboxPage';
+import { GrommetPage } from './components/grommet/GrommetPage';
+import { TailwindPage } from './components/tailwind/TailwindPage';
+import { ReactMdPage } from './components/react-md/ReactMdPage';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <Switch>
+
+            <Route path="/onsen">
+              <OnsenPage />
+            </Route>
+
+            <Route path="/rebass">
+              <RebassPage />   
+            </Route>          
+          
+            <Route path="/react-toolbox">
+              <ReactToolboxPage />
+            </Route>
+
+            <Route path="/grommet">
+              <GrommetPage />   
+            </Route>
+
+            <Route path="/reactmd">
+              <ReactMdPage />
+            </Route>
+
+            <Route path="/tailwind">
+              <TailwindPage />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

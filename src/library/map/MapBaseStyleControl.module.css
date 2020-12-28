@@ -1,0 +1,5 @@
+.MapBaseStyleControl {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+}
